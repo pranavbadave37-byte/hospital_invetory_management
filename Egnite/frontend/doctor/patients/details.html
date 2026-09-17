@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patient Details · MediCore</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="doctor-patients">
+  <div id="app-shell">
+    <div class="panel" id="notFoundPanel" style="display:none;">
+      <div class="panel-body"><div class="empty-state"><div class="icon">🗂️</div><div>Patient not found.</div></div></div>
+    </div>
+
+    <div id="patientContent" style="display:none;">
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2 id="patientName"></h2>
+            <p id="patientSub"></p>
+          </div>
+          <div class="toolbar">
+            <a class="btn btn-outline btn-sm" href="/doctor/patients/index.html">← Back to Patients</a>
+            <button class="btn btn-primary btn-sm" id="startConsultBtn">＋ Start Consultation</button>
+          </div>
+        </div>
+        <div id="tabs"></div>
+      </div>
+    </div>
+  </div>
+
+<script src="/js/mock-data.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/consultation-wizard.js"></script>
+<script src="/doctor/patients/details.js"></script>
+</body>
+</html>

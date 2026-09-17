@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MediCore</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="login-shell">
+    <div class="login-card workspace-select-card">
+      <div class="logo-row">
+        <div class="logo-mark">MC</div>
+        <div style="text-align:left;">
+          <strong style="display:block;font-size:15px;">MediCore</strong>
+          <span style="font-size:11px;color:var(--color-text-muted);">Hospital Management System</span>
+        </div>
+      </div>
+      <h1>Hospital Management System</h1>
+      <p class="subtitle">Select your workspace</p>
+
+      <div class="workspace-grid">
+        <a class="workspace-card" href="/admin-login.html">
+          <div class="workspace-icon">🛡️</div>
+          <strong>Admin</strong>
+          <span>Users, security &amp; system</span>
+        </a>
+        <a class="workspace-card" href="/doctor-login.html">
+          <div class="workspace-icon">🩺</div>
+          <strong>Doctor</strong>
+          <span>Appointments &amp; patients</span>
+        </a>
+        <a class="workspace-card" href="/pharmacy-login.html">
+          <div class="workspace-icon">💊</div>
+          <strong>Pharmacy</strong>
+          <span>Medicines &amp; stock</span>
+        </a>
+        <a class="workspace-card" href="/instrument-login.html">
+          <div class="workspace-icon">🧰</div>
+          <strong>Instrument Management</strong>
+          <span>Inventory &amp; maintenance</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+<script src="/js/mock-data.js"></script>
+<script src="/js/auth.js"></script>
+<script>
+  const existing = MediCoreAuth.getSession();
+  if (existing) {
+    window.location.href = MediCoreAuth.homeFor(existing.role);
+  }
+</script>
+</body>
+</html>

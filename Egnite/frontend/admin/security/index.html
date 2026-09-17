@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Security · MediCore</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="admin-security">
+  <div id="app-shell">
+    <div class="stat-grid" id="statGrid"></div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div><h2>Access Logs</h2><p>Successful logins &amp; logouts</p></div>
+      </div>
+      <div class="panel-body no-pad" id="accessTable"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div><h2>Failed Login Attempts</h2><p>Incorrect password or unknown username</p></div>
+      </div>
+      <div class="panel-body no-pad" id="failedTable"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div><h2>Unauthorized Access Attempts</h2><p>Signed-in users trying to reach a page outside their role</p></div>
+      </div>
+      <div class="panel-body no-pad" id="unauthorizedTable"></div>
+    </div>
+  </div>
+
+<script src="/js/mock-data.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/common.js"></script>
+<script src="/admin/security/page.js"></script>
+</body>
+</html>

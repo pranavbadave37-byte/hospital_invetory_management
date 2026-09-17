@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Appointments · MediCore</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="doctor-appointments">
+  <div id="app-shell">
+    <div class="stat-grid" id="statGrid"></div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div>
+          <h2>My Appointment Schedule</h2>
+          <p>Appointments assigned to you</p>
+        </div>
+        <div class="toolbar">
+          <div class="search-box">
+            <span id="searchIconSlot"></span>
+            <input type="text" id="searchInput" placeholder="Search patient..." />
+          </div>
+          <select class="select-filter" id="whenFilter">
+            <option value="">All dates</option>
+            <option value="today">Today</option>
+            <option value="upcoming">Upcoming</option>
+          </select>
+          <select class="select-filter" id="statusFilter">
+            <option value="">All statuses</option>
+            <option>Scheduled</option>
+            <option>In Progress</option>
+            <option>Completed</option>
+            <option>Cancelled</option>
+          </select>
+          <button class="btn btn-primary btn-sm" id="addBtn">＋ New Appointment</button>
+        </div>
+      </div>
+      <div class="panel-body no-pad" id="tableContainer"></div>
+    </div>
+  </div>
+
+<script src="/js/mock-data.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/consultation-wizard.js"></script>
+<script src="/doctor/appointments/page.js"></script>
+</body>
+</html>
