@@ -1,0 +1,12 @@
+{
+  "hospitalName": "MediCore General Hospital",
+  "timezone": "Asia/Kolkata (GMT+5:30)",
+  "dateFormat": "DD-MM-YYYY",
+  "currency": "INR (₹)",
+  "backupFrequency": "Daily",
+  "lastBackup": "",
+  "maintenanceMode": false,
+  "emailNotifications": true,
+  "smsNotifications": false,
+  "lowStockThreshold": 30
+}
